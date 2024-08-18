@@ -47,7 +47,6 @@ dependencies = [
  "lenient_semver",
  "reqwest",
  "scraper",
- "semver",
  "url",
 ]
 
