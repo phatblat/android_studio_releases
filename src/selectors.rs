@@ -15,8 +15,11 @@ pub(crate) struct Selectors {
     /// Parses the article date.
     pub(crate) date: Selector,
 
-    /// Parses the semantic and build versions.
-    pub(crate) versions: Selector,
+    /// Parses the semantic version.
+    pub(crate) semver: Selector,
+
+    /// Parses the build version.
+    pub(crate) build_version: Selector,
 }
 
 impl Selectors {
@@ -28,7 +31,8 @@ impl Selectors {
             // 3rd column
             date: Selector::parse(r#"table.table__content tbody tr td:nth-child(3) p"#).unwrap(),
             // 4th column
-            versions: Selector::parse(r#"table.table__content tbody tr td:nth-child(4) p"#).unwrap(),
+            semver: Selector::parse(r#"table.table__content tbody tr td:nth-child(4) p span.control"#).unwrap(),
+            build_version: Selector::parse(r#"table.table__content tbody tr td:nth-child(4) p:nth-child(2)"#).unwrap(),
         }
     }
 }

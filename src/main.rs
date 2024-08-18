@@ -7,6 +7,7 @@ mod release;
 mod channel;
 mod selectors;
 mod url;
+mod parse;
 /* ---------------------------------------------------------------------------------------------- */
 
 type GenericError = Box<dyn std::error::Error + Send + Sync + 'static>;

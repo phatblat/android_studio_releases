@@ -5,8 +5,8 @@ pub struct Release {
     /// The release date. (e.g. November 15, 2022)
     pub date: NaiveDate,
 
-    /// Major version code name. (e.g. Ladybug).
-    pub code_name: String,
+    /// Major version codename. (e.g. Ladybug).
+    pub codename: String,
 
     /// Version number displayed in titles. (e.g. 2024.2.1 Canary 7)
     pub version_title: String,
