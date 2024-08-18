@@ -1,3 +1,6 @@
+# Android Studio Release
+
+A simple command-line app which lists recently released versions of Android Studio.
 
 ## 📄 License
 
