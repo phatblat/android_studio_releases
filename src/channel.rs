@@ -21,3 +21,17 @@ impl Display for Channel {
         }
     }
 }
+
+impl TryFrom<String> for Channel {
+    type Error = String;
+    fn try_from(value: String) -> Result<Self, Self::Error> {
+        match value.as_str() {
+            "Canary" => Ok(Channel::Canary),
+            "Beta" => Ok(Channel::Beta),
+            "RC" => Ok(Channel::RC),
+            "Release" => Ok(Channel::Release),
+            "Patch" => Ok(Channel::Patch),
+            _ => Err(format!("Unknown Channel name: {}", value))
+        }
+    }
+}
